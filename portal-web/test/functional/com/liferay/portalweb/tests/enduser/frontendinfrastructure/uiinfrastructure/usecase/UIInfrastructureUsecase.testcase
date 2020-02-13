@@ -19,6 +19,21 @@ definition {
 		}
 	}
 
+	@description = "This is a use case for LPS-95157."
+	@priority = "5"
+	test RefreshWebContentAndHomePage {
+		ProductMenu.gotoPortlet(
+			category = "Content &amp; Data",
+			panel = "Site Administration",
+			portlet = "Web Content");
+		
+		Refresh();
+
+		if (isSet(screenshotFileName)) {
+			SikuliAssertElementPresent(locator1 = "Navigation#SCREENSHOTS_WEB_CONTENT_NAV_LEFT_PNG");
+		}
+	}
+
 	@priority = "5"
 	test RightToLeftSmoke {
 		property portal.acceptance = "false";

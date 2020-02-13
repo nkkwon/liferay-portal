@@ -13,6 +13,14 @@
 	<td>//section[contains(@id,'content')]//div[contains(@class,'portlet-body')]//ul/li/a[contains(.,'${key_pageName}')]</td>
 	<td></td>
 </tr>
+
+<!--SCREENSHOTS-->
+<tr>
+	<td>SCREENSHOTS_WEB_CONTENT_NAV_LEFT_PNG</td>
+	<td>portal/screenshots/controlpanel/web_content_nav_left.png</td>
+	<td></td>
+</tr>
+
 </tbody>
 </table>
 </body>
