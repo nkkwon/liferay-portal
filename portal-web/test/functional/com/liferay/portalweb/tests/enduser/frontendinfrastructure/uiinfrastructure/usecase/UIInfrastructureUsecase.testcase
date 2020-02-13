@@ -26,7 +26,7 @@ definition {
 			category = "Content &amp; Data",
 			panel = "Site Administration",
 			portlet = "Web Content");
-		
+
 		Refresh();
 
 		if (isSet(screenshotFileName)) {
