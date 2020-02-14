@@ -29,9 +29,17 @@ definition {
 
 		Refresh();
 
-		if (isSet(screenshotFileName)) {
-			SikuliAssertElementPresent(locator1 = "Navigation#SCREENSHOTS_WEB_CONTENT_NAV_LEFT_PNG");
-		}
+		Navbar.validateWebContentNavLeftSikuli();
+
+		Navbar.validateWebContentNavRightSikuli();
+
+		Navigator.gotoPage(pageName = "Home");
+
+		Refresh();
+
+		Navbar.validateHomePageNavLeftSikuli();
+
+		Navbar.validateHomePageNavRightSikuli();
 	}
 
 	@priority = "5"

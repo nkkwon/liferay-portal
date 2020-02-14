@@ -1,0 +1,19 @@
+definition {
+
+	macro validateHomePageNavLeftSikuli {
+		SikuliAssertElementPresent(locator1 = "Navigation#SCREENSHOTS_HOME_PAGE_NAV_LEFT_PNG");
+	}
+
+	macro validateHomePageNavRightSikuli {
+		SikuliAssertElementPresent(locator1 = "Navigation#SCREENSHOTS_HOME_PAGE_NAV_RIGHT_PNG");
+	}
+
+	macro validateWebContentNavLeftSikuli {
+		SikuliAssertElementPresent(locator1 = "Navigation#SCREENSHOTS_WEB_CONTENT_NAV_LEFT_PNG");
+	}
+
+	macro validateWebContentNavRightSikuli {
+		SikuliAssertElementPresent(locator1 = "Navigation#SCREENSHOTS_WEB_CONTENT_NAV_RIGHT_PNG");
+	}
+
+}
