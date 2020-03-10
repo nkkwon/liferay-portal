@@ -36,6 +36,8 @@ definition {
 
 		ProductMenuHelper.openProductMenu();
 
+		takeScreenshot();
+
 		Refresh();
 
 		SikuliAssertElementPresent(locator1 = "ControlMenu#HOME_HEADING_AND_PRODUCT_MENU_OPENED_PNG");
