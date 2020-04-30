@@ -216,7 +216,7 @@ definition {
 	@description = "Checks for each portlet having defined boundries."
 	@priority = "5"
 	test ViewPortletBoundries {
-		property portal.acceptance = "false";
+		property portal.acceptance = "nick-kwon";
 		property portal.upstream = "quarantine";
 
 		ProductMenu.gotoPortlet(
