@@ -18,6 +18,10 @@ definition {
 		MenuItem.click(menuItem = "${selectOption}");
 	}
 
+	macro deleteDuplicateRichTextField {
+		Click(locator1 = "Form#SIDEBAR_DUPLICATE_DELETE");
+	}
+
 	macro deleteGridOptionsRow {
 		Click.javaScriptClick(
 			key_gridField = "${gridField}",
@@ -59,10 +63,6 @@ definition {
 
 	macro duplicateRichTextField {
 		Click(locator1 = "Form#SIDEBAR_DUPLICATE_PLUS");
-	}
-
-	macro deleteDuplicateRichTextField {
-		Click(locator1 = "Form#SIDEBAR_DUPLICATE_DELETE");
 	}
 
 	macro editBlankMultiTextFieldWithEnterKey {
