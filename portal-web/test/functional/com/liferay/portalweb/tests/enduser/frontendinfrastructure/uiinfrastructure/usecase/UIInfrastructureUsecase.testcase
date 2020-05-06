@@ -264,6 +264,8 @@ definition {
 
 		Pause(locator1 = "3000");
 
+		Portlet.assertPortletHeader(portletName = "MBPortlet");
+
 		takeScreenshot();
 
 		MouseOver(
@@ -272,6 +274,8 @@ definition {
 
 		Pause(locator1 = "3000");
 
+		Portlet.assertPortletHeader(portletName = "HelloWorldPortlet");
+
 		takeScreenshot();
 
 		MouseOver(
@@ -279,6 +283,8 @@ definition {
 			locator1 = "Home#PAGE_COLUMN_PORTLET_COLUMN_3_PORTLET_TITLE");
 
 		Pause(locator1 = "3000");
+
+		Portlet.assertPortletHeader(portletName = "DLPortlet");
 
 		takeScreenshot();
 	}
