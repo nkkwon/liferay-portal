@@ -657,15 +657,9 @@ definition {
 			isCreatingFormView = "true",
 			isCreatingViaPlusIcon = "true");
 
-		FormViewBuilder.addFieldByDoubleClick(fieldType = "Text");
-
-		FormViewBuilder.validateFieldLabel(fieldLabel = "Text");
-
-		Click(locator1 = "FormViewBuilder#RULE_BUILDER_GO_BACK");
-
 		FormViewBuilder.setUpTwoFieldSets(
 			fieldSetName = "Field Sets",
-			fieldType = "Text",
+			fieldType1 = "Text",
 			fieldType2 = "Numeric");
 
 		FormViewBuilder.goToFieldsetsTab();
@@ -676,7 +670,7 @@ definition {
 
 		FormViewBuilder.setUpTwoFieldSets(
 			fieldSetName = "Field Sets",
-			fieldType = "Text",
+			fieldType1 = "Text",
 			fieldType2 = "Numeric");
 
 		FormViewBuilder.addFieldByDoubleClick(fieldType = "Field Sets");
@@ -697,7 +691,7 @@ definition {
 
 		FormViewBuilder.setUpTwoFieldSets(
 			fieldSetName = "Field Sets",
-			fieldType = "Text",
+			fieldType1 = "Text",
 			fieldType2 = "Numeric");
 
 		FormViewBuilder.addFieldByDoubleClick(fieldType = "Field Sets");
@@ -714,7 +708,7 @@ definition {
 
 		FormViewBuilder.setUpTwoFieldSets(
 			fieldSetName = "Field Sets",
-			fieldType = "Text",
+			fieldType1 = "Text",
 			fieldType2 = "Numeric");
 
 		FormViewBuilder.addFieldByDoubleClick(fieldType = "Field Sets");
@@ -741,7 +735,7 @@ definition {
 
 		FormViewBuilder.setUpTwoFieldSets(
 			fieldSetName = "Field Sets",
-			fieldType = "Text",
+			fieldType1 = "Text",
 			fieldType2 = "Numeric");
 
 		FormViewBuilder.addFieldByDoubleClick(fieldType = "Field Sets");
