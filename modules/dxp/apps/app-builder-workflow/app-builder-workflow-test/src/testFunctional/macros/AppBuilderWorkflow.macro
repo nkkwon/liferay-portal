@@ -277,6 +277,10 @@ definition {
 			locator1 = "IFrame#MODAL_ANY");
 	}
 
+	macro collapseActivity {
+		Click(locator1 = "AppBuilderWorkflow#ACTIVITY_HEADER");
+	}
+
 	macro createSimpleFormView {
 		FormViewBuilder.addFieldByDoubleClick(fieldType = "${fieldType}");
 		FormViewBuilder.setName(formViewName = "${formViewName}");
@@ -464,6 +468,28 @@ definition {
 				key_actionName = "${secondaryActionName}",
 				locator1 = "AppBuilderWorkflow#ACTION_NAME_INSIDE_ACTIONS_CARD");
 		}
+	}
+
+	macro validateActivity {
+		AssertElementPresent(
+			locator1 = "AppBuilderWorkflow#ACTIVITY_DESCRIPTION",
+			value1 = "${description}");
+	}
+
+	macro validateActivityDate {
+		var key_currentDateDay = DateUtil.getFormattedDate("0", "dd");
+		var key_currentDateYear = DateUtil.getCurrentYear();
+		var key_currentDate = "/${key_currentDateDay}/${key_currentDateYear}";
+
+		AssertTextEquals.assertPartialText(
+			locator1 = "AppBuilderWorkflow#ACTIVITY_DATE",
+			value1 = "${key_currentDate}");
+	}
+
+	macro validateCollapsedActivity {
+		AssertElementPresent(
+			key_description = "${description}",
+			locator1 = "AppBuilderWorkflow#ACTIVITY_DESCRIPTION_COLLAPSED");
 	}
 
 	macro validateFormOrTableViewResultNotPresent {
