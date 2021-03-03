@@ -70,6 +70,7 @@ definition {
 	test CreateNewNotificationTemplate {
 		property portal.acceptance = "true";
 		property test.name.skip.portal.instance = "CPCommerceChannels#CreateNewNotificationTemplate";
+		property portal.upstream = "quarantine";
 
 		CommerceNavigator.gotoPortlet(
 			category = "Store Management",
