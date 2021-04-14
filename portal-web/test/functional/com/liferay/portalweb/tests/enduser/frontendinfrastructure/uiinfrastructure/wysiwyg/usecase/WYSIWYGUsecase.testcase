@@ -75,6 +75,34 @@ definition {
 	}
 
 	@priority = "4"
+	test ShouldBeAbleToAddALinkToCKEditor {
+		ProductMenu.gotoPortlet(
+			category = "Content & Data",
+			portlet = "Web Content");
+
+		WebContentNavigator.gotoAddCP();
+
+		PortletEntry.inputTitle(title = "Web Content Title");
+
+		SelectFrame.selectFrameNoLoading(locator1 = "CKEditor#BODY_FIELD_IFRAME_2");
+
+		Click(locator1 = "CKEditor#BODY");
+
+		Type(
+			locator1 = "CKEditor#BODY",
+			value1 = "Test Link");
+
+		SelectFieldText(locator1 = "CKEditor#BODY");
+
+		SelectFrame(value1 = "relative=top");
+
+		CKEditor.addEntryExternalURL(
+			entryExternalURL = "/web/guest/home",
+			fieldLabel = "content"
+		);
+	}
+
+	@priority = "4"
 	test AddWebContentArticleCopyPasteContent {
 		property app.server.types = "jboss,tcserver,tomcat,weblogic,websphere,wildfly";
 		property database.types = "db2,hypersonic,mariadb,mysql,oracle,postgresql,sqlserver,sybase";
