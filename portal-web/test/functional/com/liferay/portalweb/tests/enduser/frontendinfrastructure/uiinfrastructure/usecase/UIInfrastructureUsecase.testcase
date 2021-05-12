@@ -183,10 +183,10 @@ definition {
 	@description = "Ensure that a user can access portlet options and drag and drop portlets."
 	@priority = "5"
 	test Smoke {
-		property osgi.modules.includes = "frontend-taglib-clay-sample-web";
 		property app.server.types = "jboss,tcserver,tomcat,weblogic,websphere,wildfly";
 		property database.types = "db2,hypersonic,mariadb,mysql,oracle,postgresql,sqlserver,sybase";
 		property environment.acceptance = "true";
+		property osgi.modules.includes = "frontend-taglib-clay-sample-web";
 		property portal.acceptance = "true";
 
 		ProductMenu.gotoPortlet(
@@ -282,10 +282,10 @@ definition {
 	@description = "Checks for each portlet having defined boundaries."
 	@priority = "5"
 	test ViewPortletBoundaries {
-		property osgi.modules.includes = "frontend-taglib-clay-sample-web";
 		property app.server.types = "jboss,tcserver,tomcat,weblogic,websphere,wildfly";
 		property database.types = "db2,hypersonic,mariadb,mysql,oracle,postgresql,sqlserver,sybase";
 		property environment.acceptance = "quarantine";
+		property osgi.modules.includes = "frontend-taglib-clay-sample-web";
 		property portal.acceptance = "quarantine";
 		property portal.upstream = "quarantine";
 
