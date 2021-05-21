@@ -7632,6 +7632,7 @@ virtualHostname="localhost"
 					<dirset
 						dir="modules"
 						includes="${osgi.modules.includes.pattern}"
+						excludes="**/node_modules/**"
 					>
 						<or>
 							<present targetdir="modules">
