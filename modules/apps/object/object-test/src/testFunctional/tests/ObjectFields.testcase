@@ -3018,10 +3018,9 @@ definition {
 			ObjectAdmin.goToFieldsDetails(label = "Custom Aggregation");
 
 			ObjectCustomViews.addNewAggregationFilterViaUI(
+				dateValueList = "2000-01-01, 2001-01-01",
 				filterBy = "Custom Date",
-				filterType = "Range",
-				dateValueList = "2000-01-01, 2001-01-01"
-			);
+				filterType = "Range");
 		}
 
 		task ("Then: The new filter is created") {
