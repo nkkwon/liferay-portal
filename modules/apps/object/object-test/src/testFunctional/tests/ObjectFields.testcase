@@ -1444,6 +1444,44 @@ definition {
 			locator1 = "DocumentsAndMedia#DESCRIPTIVE_LIST_FOLDER_TITLE");
 	}
 
+	@description = "Verify that the user can search for the field name into the Field Input"
+	@priority = 4
+	test CanSearchFieldNameInAggregationFieldInput {
+		task ("Given: A custom object") {
+			ObjectAdmin.addObjectViaAPI(
+				labelName = "Custom Object",
+				objectName = "CustomObject",
+				pluralLabelName = "Custom Objects");
+
+			ObjectAdmin.addObjectRelationshipViaAPI(
+				objectName_1 = "CustomObject",
+				objectName_2 = "CustomObject",
+				relationshipLabel = "Relationship",
+				relationshipName = "relationship",
+				relationshipType = "oneToMany");
+
+			ObjectAdmin.openObjectAdmin();
+
+			ObjectPortlet.selectCustomObject(label = "Custom Object");
+
+			ObjectAdmin.goToFieldsTab();
+
+			ObjectAdmin.addObjectFieldViaUI(
+				fieldLabel = "Custom Integer",
+				fieldName = "customInteger",
+				fieldType = "Integer");
+		}
+
+		task ("When: A Custom Aggregation Field is added, Then: The user is able to search a field name in the field input") {
+			ObjectAdmin.addObjectAggregationFieldWithSearch(
+				field = "Custom Integer",
+				fieldLabel = "Custom Aggregation",
+				fieldType = "Aggregation",
+				function = "Max",
+				relationship = "Relationship");
+		}
+	}
+
 	@description = "LPS-162177 - Verify the ERC element is included in Actions - Expression Builder"
 	@priority = 5
 	test CanSeeERCFieldOnActionSidebar {
