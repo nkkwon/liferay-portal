@@ -600,6 +600,11 @@
 		<td>//h3[(@class='lfr-objects__card-title') and text()='Searchable']/../..//label[contains(@class,'toggle-switch simple-toggle-switch')]</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>AGGREGATION_FIELD_NAME_SEARCH</td>
+		<td>//div[5]//input[contains(@class,'form-control input-group-inset input-group-inset-after')]</td>
+		<td></td>
+	</tr>
 </tbody>
 </table>
 </body>
