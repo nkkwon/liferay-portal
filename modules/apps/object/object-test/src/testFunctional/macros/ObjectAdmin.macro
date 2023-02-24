@@ -77,6 +77,42 @@ definition {
 			whenAction = ${whenAction});
 	}
 
+	macro addObjectAggregationFieldWithSearch {
+		LexiconEntry.gotoAdd();
+
+		Type(
+			locator1 = "ObjectField#LABEL_INPUT",
+			value1 = ${fieldLabel});
+
+		ObjectField.selectType(fieldType = ${fieldType});
+
+		Click(locator1 = "ObjectField#LABEL_RELATIONSHIP");
+
+		Click(
+			key_dropdownItem = ${relationship},
+			locator1 = "ObjectAdmin#SELECT_DROPDOWN_ITEM_DEFAULT_VALUE");
+
+		Click(
+			key_filterLabel = "Function",
+			locator1 = "ObjectCustomViews#SELECT_FILTER_GENERIC");
+
+		Click(
+			key_fieldType = ${function},
+			locator1 = "ObjectField#TYPE_OPTION");
+
+		Click(locator1 = "ObjectField#LABEL_FIELD");
+
+		Type(
+			locator1 = "ObjectAdmin#AGGREGATION_FIELD_NAME_SEARCH",
+			value1 = ${field});
+
+		Click(
+			key_dropdownItem = ${field},
+			locator1 = "ObjectAdmin#SELECT_DROPDOWN_ITEM_DEFAULT_VALUE");
+
+		PortletEntry.save();
+	}
+
 	macro addObjectBooleanFieldEntryViaUI {
 		ObjectAdmin.goToCustomObject(objectName = ${objectName});
 
