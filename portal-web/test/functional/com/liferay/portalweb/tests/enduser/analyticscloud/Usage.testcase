@@ -467,7 +467,7 @@ definition {
 
 			ACUtils.closeAllSessionsAndWait();
 		}
-
+a
 		task ("Go to AC > Usage again and get the new value of Page Views") {
 			ACUtils.launchAC();
 
